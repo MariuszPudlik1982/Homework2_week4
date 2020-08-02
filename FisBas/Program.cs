@@ -27,7 +27,12 @@ namespace FisBas
                     Console.WriteLine(ex.Message);
                     Console.WriteLine("Podałeś błędne dane");
                 }
-                
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Podałeś zbyt dużą liczbę");
+                }
+
                 Console.WriteLine("Jeśli chcesz przerwać wciśnij k, jeśli chcesz kontynuować wciśnij dowolny znak");
                 k= Console.ReadLine();
             } while (k!="k");
